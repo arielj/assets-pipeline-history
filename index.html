@@ -21,7 +21,7 @@
 
     <link rel="stylesheet" href="./reset.css" />
     <link rel="stylesheet" href="./reveal.css" />
-    <link rel="stylesheet" href="./theme/black.css" id="theme" />
+    <link rel="stylesheet" href="./theme/white.css" id="theme" />
 
     <!-- Theme used for syntax highlighting of code -->
     <link
@@ -32,7 +32,7 @@
 
     <style>
       body {
-        background: black;
+        background: rgb(255, 255, 255);
       }
 
       #first h1 {
@@ -195,6 +195,10 @@
         height: 2.5rem;
         padding: 0 20px;
       }
+      .reveal .slides section .fragment:not(.invisible):not(.visible) {
+        opacity: 0.1;
+        visibility: visible;
+      }
     </style>
   </head>
 
@@ -202,8 +206,18 @@
     <div class="reveal">
       <!-- Any section element inside of this container is displayed as a slide -->
       <div class="slides">
-        <section data-background-color="gray" id="first">
+        <section id="first">
           <h1>La evolución del Assets Pipeline a través del tiempo</h1>
+        </section>
+
+        <section>
+          <h2>Y vos quién sos?</h2>
+
+          <ul>
+            <li>Ariel Juodziukynas</li>
+            <li>Dev fullstack, principalmente Rails y React</li>
+            <li>Primer contacto con Rails en 2011</li>
+          </ul>
         </section>
 
         <section>
@@ -248,7 +262,7 @@
                 Un archivo grande vs muchos archivos chicos
               </li>
               <li class="fragment">
-                Sin soporte para otros lenguages como CoffeeScript -2009- o SASS
+                Sin soporte para otros lenguajes como CoffeeScript -2009- o SASS
                 (TypeScript no existía todavía)
               </li>
               <li class="fragment">Tamaño de archivo no optimizado</li>
@@ -261,7 +275,7 @@
               height="200"
               style=""
               frameborder="0"
-              class="fragment giphy-embed"
+              class="fragment giphy-embed invisible"
               allowfullscreen
             ></iframe>
           </section>
@@ -297,10 +311,10 @@
                 referenciado (muchos archivos convertidos en uno grande)
               </li>
               <li class="fragment">
-                Transpilation: soporte de CoffeeScript y SASS/SCSS por defecto
+                Transpilación: soporte de CoffeeScript y SASS/SCSS por defecto
               </li>
               <li class="fragment">
-                Tamaño optimizado: usa compresión y obfuscación
+                Tamaño optimizado: usa compresión y ofuscación
                 (uglifiers/minifiers) para remover lo que el navegador no
                 necesita
               </li>
@@ -308,7 +322,7 @@
                 Fácil agregar assets externos usando gemas
               </li>
               <li class="fragment">
-                La gema `jquery-rails` se include por defecto
+                La gema `jquery-rails` se incluye por defecto
               </li>
             </ul>
           </section>
@@ -326,15 +340,15 @@
               multiples páginas
             </li>
             <li class="fragment">
-              La funcionalidad básica funcioan buen, pero generó muchos
+              La funcionalidad básica funcionaba bien, pero generó muchos
               problemas durante años al usar paquetes de terceros
             </li>
-            <img
-              class="fragment"
-              src="./images/hide.jpg"
-              style="width: 300px"
-            />
           </ul>
+          <img
+            class="fragment invisible"
+            src="./images/quelindo.gif"
+            style="width: 300px"
+          />
         </section>
 
         <section>
@@ -387,7 +401,7 @@
               width="380"
               style=""
               frameborder="0"
-              class="fragment giphy-embed"
+              class="fragment giphy-embed invisible"
               allowfullscreen
             ></iframe>
           </section>
@@ -456,7 +470,7 @@
                 populares: esbuild, rollup, and bun
               </li>
               <li class="fragment">
-                cssbundling-rails, permita usar otros bundler cd CSS populares:
+                cssbundling-rails, permite usar otros bundler cd CSS populares:
                 tailwind, bulma, dart-sass, etc
               </li>
             </ul>
@@ -486,8 +500,8 @@
 
           <ul>
             <li class="fragment">
-              Propshaft por defecto en Rails 8. It does way fewer things than
-              Sprockets
+              Propshaft por defecto en Rails 8. Funciones muy básicas comparado
+              con Sprockets
             </li>
             <li class="fragment">
               Sprockets sigue con soporte ("for a long time" según el readme de
@@ -588,8 +602,6 @@
         </section>
 
         <section>
-          <h2>Preguntas?</h2>
-
           <iframe
             src="https://giphy.com/embed/HJB9Nq9RMZgZlLssZF"
             height="200"
@@ -598,6 +610,13 @@
             class="giphy-embed"
             allowfullscreen
           ></iframe>
+
+          <figure style="display: inline-block">
+            <img src="./images/qr.png" style="margin: 0" />
+            <figcaption style="font-size: 1.2rem">Slides</figcaption>
+          </figure>
+
+          <h2>Preguntas?</h2>
 
           <p>Recursos:</p>
           <ul>
@@ -617,9 +636,9 @@
             </li>
             <li>
               <a
-                href="https://www.fastruby.io/blog/navigating-asset-management-madness.html"
+                href="https://arielj.github.io/assets-pipeline-history"
                 target="_blank"
-                >slides</a
+                >arielj.github.io/assets-pipeline-history</a
               >
             </li>
           </ul>
